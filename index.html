@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by  Ya-Yun Tsai</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+<div id="app">
+  <div class="ticket">
+    <div class="date">{{ ticket.date }}</div>
+    <div class="info">{{ company }}</div>
+    <div class="info">{{ ticket.direction == 'north'?'北上': '南下'}}</div>
+    <div class="station">{{ ticket.from }}站</div>
+    <div class="arrow">↓</div>
+    <div class="station">{{ ticket.to }}站</div>
+    <div class="info" v-html="ticket.other"></div>
+    <div class="info">特價 {{ ticket.price * ticket.discount }}元</div>
+  </div>
+  <div class="ticket">
+    <div class="date">{{ ticket.date }}</div>
+    <div class="info">{{ company }}</div>
+    <div class="info">{{ ticket.direction == 'north'?'北上': '南下'}}</div>
+    <div class="station">{{ ticket.to }}站</div>
+    <div class="arrow">↓</div>
+    <div class="station">{{ ticket.from }}站</div>
+    <div class="info" v-html="ticket.other"></div>
+    <div class="info">售價 {{ ticket.price }}元</div>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
